@@ -1,7 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        Main.bubbleSort(new int[]{4,3,5,1,2,});
+        int[] arr = new int[]{4,3,5,1,2,};
+        Main.printArr(arr);
+        arr = Main.bubbleSort(arr);
+        Main.printArr(arr);
     }
 
     public static int[] bubbleSort(int[] arr){
@@ -16,5 +19,12 @@ public class Main {
             }
         }
         return arr;
+    }
+
+    public static void printArr(int[] arr){
+        System.out.print("[ ");
+        for (int i=0; i<arr.length; i++)
+            System.out.print(arr[i] + ", ");
+        System.out.println("]");
     }
 }
